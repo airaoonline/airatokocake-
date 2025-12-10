@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Cake Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #FF69B4; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; }
+        .product { display: inline-block; width: 30%; margin: 10px; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+        .product img { width: 100%; height: 150px; object-fit: cover; }
+        button { background-color: #FF69B4; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #FF1493; }
+        #cart { margin-top: 20px; padding: 10px; background: #eee; border-radius: 8px; }
+        #cart-items { list-style: none; padding: 0; }
+        #checkout { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko Cake Manis Endul</h1>
+        <p>Pilih cake favorit Anda dan pesan sekarang!</p>
+    </header>
+    <div class="container">
+        <h2>Daftar Cake</h2>
+        <div id="products">
+            <!-- 15 Cake dengan gambar offline -->
+            <div class="product">
+                <img src="cokelat.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rp 50.000</p>
+                <button onclick="addToCart('Chocolate Cake', 50000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="coklat1.jpg" alt="Dark Chocolate Cake">
+                <h3>Dark Chocolate Cake</h3>
+                <p>Rp 45.000</p>
+                <button onclick="addToCart('Dark Chocolate Cake', 45000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="beri.jpg" alt="Strawberry Cake">
+                <h3>Strawberry Cake</h3>
+                <p>Rp 55.000</p>
+                <button onclick="addToCart('Strawberry Cake', 55000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="redvelvet.jpg" alt="Red Velvet Cake">
+                <h3>Red Velvet Cake</h3>
+                <p>Rp 60.000</p>
+                <button onclick="addToCart('Red Velvet Cake', 60000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="coklat2.jpg" alt="Chocolate Fudge Cake">
+                <h3>Chocolate Fudge Cake</h3>
+                <p>Rp 48.000</p>
+                <button onclick="addToCart('Chocolate Fudge Cake', 48000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="bery.jpg" alt="Strawberry Fresh Cream Cake">
+                <h3>Strawberry Fresh Cream Cake</h3>
+                <p>Rp 52.000</p>
+                <button onclick="addToCart('Strawberry Fresh Cream Cake', 52000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="matcha.jpg" alt="Matcha Cake">
+                <h3>Matcha Cake</h3>
+                <p>Rp 70.000</p>
+                <button onclick="addToCart('Matcha Cake', 70000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="bento.jpg" alt="Bento Cake">
+                <h3>Bento Cake</h3>
+                <p>Rp 65.000</p>
+                <button onclick="addToCart('Bento Cake', 65000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="bow.jpg" alt="Rainbow Cake">
+                <h3>Rainbow Cake</h3>
+                <p>Rp 75.000</p>
+                <button onclick="addToCart('Rainbow Cake', 75000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="keju.jpg" alt="Cheese Cake">
+                <h3>Keju Cake</h3>
+                <p>Rp 50.000</p>
+                <button onclick="addToCart('Keju Cake', 50000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="banana.jpg" alt="Banana Cake">
+                <h3>Banana Cake</h3>
+                <p>Rp 47.000</p>
+                <button onclick="addToCart('Banana Cake', 47000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="pineapple.jpg" alt="Pineapple Cake">
+                <h3>Pineapple Cake</h3>
+                <p>Rp 53.000</p>
+                <button onclick="addToCart('Pineapple Cake', 53000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="durian.jpg" alt="Durian Cake">
+                <h3>Durian Cake</h3>
+                <p>Rp 62.000</p>
+                <button onclick="addToCart('Durian Cake', 62000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="money.jpg" alt="Money Cake">
+                <h3>Money Cake</h3>
+                <p>Rp 100.000</p>
+                <button onclick="addToCart('Money Cake', 80000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="mango.jpg" alt="Mango Cake">
+                <h3>Mango Cake</h3>
+                <p>Rp 58.000</p>
+                <button onclick="addToCart('Mango Cake', 58000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+
+        <div id="cart">
+            <h3>Keranjang Belanja</h3>
+            <ul id="cart-items"></ul>
+            <p>Total: Rp <span id="total">0</span></p>
+            <button id="checkout" onclick="checkoutToWA()">Checkout ke WA</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - Rp ${item.price}`;
+                cartItems.appendChild(li);
+            });
+            document.getElementById('total').textContent = total;
+        }
+
+        function checkoutToWA() {
+            if (cart.length === 0) {
+                alert('Keranjang kosong!');
+                return;
+            }
+            const message = `Halo, saya ingin memesan cake:\n${cart.map(item => `${item.name} - Rp ${item.price}`).join('\n')}\nTotal: Rp ${total}`;
+            const phone = '6282275181984'; // Ganti dengan nomor WA Anda
+            const url = `https://wa.me/${6282275181984}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
